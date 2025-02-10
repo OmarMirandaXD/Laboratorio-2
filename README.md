@@ -3,7 +3,7 @@
 ## 📂 Colección de Postman
 Para facilitar las pruebas de los endpoints, puedes importar la siguiente colección en Postman. 
 
-📥 **Descargar la colección:** [API_Endpoints_Collection.json](./API_Endpoints_Collection.json)
+📥 **Descargar la colección:** [API_Endpoints_Collection.json](configs/API_Endpoints_Collection.json.)
 
 ### 📌 ¿Cómo importar la colección en Postman?
 1. Descarga el archivo JSON desde el enlace.
