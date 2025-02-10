@@ -1,5 +1,18 @@
 # 📌 API Endpoints Documentation
 
+## 📂 Colección de Postman
+Para facilitar las pruebas de los endpoints, puedes importar la siguiente colección en Postman. 
+
+📥 **Descargar la colección:** [API_Endpoints_Collection.json](./API_Endpoints_Collection.json)
+
+### 📌 ¿Cómo importar la colección en Postman?
+1. Descarga el archivo JSON desde el enlace.
+2. Abre Postman y haz clic en **Importar**.
+3. Selecciona el archivo JSON y cárgalo en Postman.
+4. ¡Listo! Ahora puedes probar los endpoints con facilidad.
+
+---
+
 ## 🔐 LOGIN
 ### ➤ POST /v1/auth/login  
 📌 **Body:**  

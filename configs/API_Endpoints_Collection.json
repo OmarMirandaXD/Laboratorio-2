@@ -1,0 +1,385 @@
+{
+    "info": {
+      "name": "Laboratorio-2 API",
+      "_postman_id": "12345-67890-abcdef",
+      "description": "Colección de Postman para la API de Laboratorio-2",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Login",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"email\": \"string\",\n  \"password\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/auth/login",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "auth", "login"]
+          }
+        }
+      },
+      {
+        "name": "Register Student",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Nombre\",\n  \"surname\": \"Apellido\",\n  \"email\": \"email@example.com\",\n  \"password\": \"Contraseña123!\",\n  \"phone\": \"12345678\",\n  \"role\": \"STUDENT_ROLE\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/auth/register",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "auth", "register"]
+          }
+        }
+      },
+      {
+        "name": "Assign Class to Student",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"classId\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/student/assignClass/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "student", "assignClass", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Find Student",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/student/findStudent/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "student", "findStudent", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Get Students",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/student/",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "student"]
+          }
+        }
+      },
+      {
+        "name": "Get Assigned Classes",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/student/assignedClasses/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "student", "assignedClasses", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Update Student Password",
+        "request": {
+          "method": "PATCH",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"newPassword\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/student/updatePassword/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "student", "updatePassword", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Update Student",
+        "request": {
+          "method": "PUT",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"age\": \"number\",\n  \"class\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/student/updateStudent/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "student", "updateStudent", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Delete Student",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/student/deleteStudent/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "student", "deleteStudent", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Register Teacher",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"Nombre del profesor\",\n  \"surname\": \"Apellido del profesor\",\n  \"email\": \"email@example.com\",\n  \"password\": \"Contraseña123!\",\n  \"asignature\": \"Asignatura\",\n  \"role\": \"TEACHER_ROLE\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/auth/register",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "auth", "register"]
+          }
+        }
+      },
+      {
+        "name": "Assign Class to Teacher",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"classId\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/teacher/assignClass/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "teacher", "assignClass", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Find Teacher",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/teacher/findTeacher/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "teacher", "findTeacher", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Get Teachers",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/teacher/",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "teacher"]
+          }
+        }
+      },
+      {
+        "name": "Get Assigned Classes by Teacher",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/teacher/assignedClasses/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "teacher", "assignedClasses", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Update Teacher Password",
+        "request": {
+          "method": "PATCH",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"newPassword\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/teacher/updatePassword/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "teacher", "updatePassword", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Update Teacher",
+        "request": {
+          "method": "PUT",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"age\": \"number\",\n  \"subject\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/teacher/updateTeacher/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "teacher", "updateTeacher", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Delete Teacher",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/teacher/deleteTeacher/:uid",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "teacher", "deleteTeacher", ":uid"]
+          }
+        }
+      },
+      {
+        "name": "Create Class",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"className\": \"Mate\",\n  \"teacher\": \"67a9450a5a6075f422d88dbb\",\n  \"schedule\": \"Horario de la clase\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/class/createClass",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "class", "createClass"]
+          }
+        }
+      },
+      {
+        "name": "Find Class",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/class/findClass/:classId",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "class", "findClass", ":classId"]
+          }
+        }
+      },
+      {
+        "name": "Get Classes",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/class/",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "class"]
+          }
+        }
+      },
+      {
+        "name": "Get Assigned Students",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/class/assignedStudents/:classId",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "class", "assignedStudents", ":classId"]
+          }
+        }
+      },
+      {
+        "name": "Update Class",
+        "request": {
+          "method": "PATCH",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"teacherId\": \"string\"\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          },
+          "url": {
+            "raw": "{{base_url}}/v1/class/updateClass/:classId",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "class", "updateClass", ":classId"]
+          }
+        }
+      },
+      {
+        "name": "Delete Class",
+        "request": {
+          "method": "DELETE",
+          "header": [],
+          "url": {
+            "raw": "{{base_url}}/v1/class/deleteClass/:classId",
+            "host": ["{{base_url}}"],
+            "path": ["v1", "class", "deleteClass", ":classId"]
+          }
+        }
+      }
+    ]
+  }
